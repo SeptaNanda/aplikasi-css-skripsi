@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+/* HEADER */
+
+/* HEADER */
+
+/* PAGE TITLE */
+
+.page-title {
+    width: 100%;
+    height: auto;
+    margin: 8vw 0;
+    display: flex;
+    justify-content: center;
+}
+.page-title h1 {
+    font-size: 5vw;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 0.7vw;
+    text-decoration: underline;
+}
+
+/* PADDING BUTTON */
+
+.justify-content, .align-items, .flex-direction {
+    width: 100%;
+    display: flex;
+}
+.justify-content div,.align-items div, .flex-direction div {
+    flex: 1;
+}
+
+.justify-content button, .align-items button, .flex-direction button {
+    min-width: 15vw;
+    display: block;
+    margin: 0 auto;
+}
+.justify-content img, .align-items img, .flex-direction img {
+    width: 95%;
+    display: block;
+    margin: 2vw auto;
+}
+
+#showDiv1, #showDiv2, #showDiv3, #showDiv4, #showDiv5, #showDiv6, #showDiv11, #showDiv12, #showDiv13, #showDiv21, #showDiv22, #showDiv23, #showDiv24 {
+    padding: 1vw 2vw;
+    font-size: 1.5vw;
+    background-color: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+    color: #333;
+    
+}
+#showDiv1:hover,#showDiv2:hover,#showDiv3:hover,#showDiv4:hover,#showDiv5:hover,#showDiv6:hover,#showDiv11:hover,#showDiv12:hover,#showDiv13:hover,#showDiv21:hover,#showDiv22:hover,#showDiv23:hover,#showDiv24:hover {
+    scale: 1.1;
+    background-color: #333;
+    color: orange;
+    cursor: pointer;
+}
+/* CODING CSS */
+.css-coding-title {
+    width: 100%;
+    height: auto;
+    margin: 10vw 0;
+}
+.css-coding-title h1 {
+    text-align: center;
+    font-size: 3vw;
+}
+
+.editor {
+	width: 100%;
+	height: auto;
+}
+#output {
+	width: 99%;
+	min-height: 20vw;
+	display: block;
+	margin: 2vw 0;
+}
+#html-code, #css-code {
+	width: 49%;
+	min-height: 20vw;
+}
+#html-code {
+	margin: 0;
+}
+button {
+    outline: none;
+    border: 1px solid #333;
+    border-radius: 1vw;
+}
+
+.justify-content-title, .flex-direction-title , .align-items-title  {
+    text-align: center;
+    margin: 3vw 0;
+}

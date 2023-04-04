@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="/navbar.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="grid-script.js"></script>
+    <title>Grid</title>
+</head>
+<body>
+    <nav class="menu">
+        <ul >
+          <li><a href="/home.html">HOME</a></li>
+          <li><a href="#">CSS - MENU</a>
+            <ul class="dropdown">
+              <li><a href="/components/padding/padding.html">Padding</a></li>
+              <li><a href="/components/margin/margin.html">Margin</a></li>
+              <li><a href="/components/fonts/fonts.html">Fonts</a></li>
+              <li><a href="/components/background-color/background-color.html">Background Color</a></li>
+              <li><a href="/components/flex/flex.html">Flex</a></li>
+              <li><a href="grid.html">Grid</a></li>
+            </ul>
+          </li>
+          <li><a href="/components/drawing/drawing.html">DESIGN CSS</a></li>
+        </ul>
+      </nav>
+    <div class="page-title">
+        <h1>GRID</h1>
+    </div>
+    <!-- MAIN -->
+    <main>
+        <div class="padding">
+            <button id="showDiv1">padding</button>
+            <div id="myDiv1" style="display:none;"><img src="/components/padding/images/padding.PNG" alt=""></div>
+        </div>
+        <div class="padding-top">
+            <button id="showDiv2">padding-top</button>
+            <div id="myDiv2" style="display:none;"><img src="/components/padding/images/padding-top.PNG" alt=""></div>
+        </div>
+        <div class="padding-bottom">
+            <button id="showDiv3">padding-bottom</button>
+            <div id="myDiv3" style="display:none;"><img src="/components/padding/images/padding-bottom.PNG" alt=""></div>
+        </div>
+        <div class="padding-right">
+            <button id="showDiv4">padding-right</button>
+            <div id="myDiv4" style="display:none;"><img src="/components/padding/images/padding-right.PNG" alt=""></div>
+        </div>
+        <div class="padding-left">
+            <button id="showDiv5">padding-left</button>
+            <div id="myDiv5" style="display:none;"><img src="/components/padding/images/padding-left.PNG" alt=""></div>
+        </div>
+    </main>
+    <!-- MAIN -->
+    <!-- CODING SECTION -->
+    <div class="css-coding-title">
+        <h1>COBA SENDIRI CODINGMU</h1>
+    </div>
+    <section class="coding-css">
+        <div class="editor">
+            <textarea id="html-code">
+<h1>KETIK DISINI!</h1>
+            </textarea>
+            <textarea id="css-code">
+body {
+    background-color : #333;
+    padding : 0;
+    margin : 0;
+}
+h1 {
+    width : fit-content;
+    height : auto;
+    background-color : orange;
+}
+h1 {
+    padding-top : 100px;
+    padding-bottom : 50px;
+    padding-right : 50px;
+    padding-left : 20px;
+}
+            </textarea>
+            
+            <iframe id="output"></iframe>
+        </div>
+    
+        <script type="text/javascript">
+            function run () {
+                let htmlCode = document.querySelector(".editor #html-code").value;
+                let cssCode = "<style>"+document.querySelector(".editor #css-code").value+"<style>";
+                
+                let output = document.querySelector(".editor #output");
+    
+                output.contentDocument.body.innerHTML = htmlCode+cssCode;
+                output.contentWindow.eval(jsCode);
+            }
+            document.querySelector(".editor #html-code").addEventListener("keyup", run);
+            document.querySelector(".editor #css-code").addEventListener("keyup", run);
+            </script>
+    </section>
+</body>
+</html>

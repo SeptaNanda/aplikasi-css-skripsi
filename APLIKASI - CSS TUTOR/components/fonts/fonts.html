@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="/navbar.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="fonts-script.js"></script>
+    <title>Fonts</title>
+</head>
+<body>
+    <nav class="menu">
+        <ul >
+          <li><a href="/home.html">HOME</a></li>
+          <li><a href="#">CSS - MENU</a>
+            <ul class="dropdown">
+              <li><a href="/components/padding/padding.html">Padding</a></li>
+              <li><a href="/components/margin/margin.html">Margin</a></li>
+              <li><a href="fonts.html">Fonts</a></li>
+              <li><a href="/components/background-color/background-color.html">Background Color</a></li>
+              <li><a href="/components/flex/flex.html">Flex</a></li>
+              <li><a href="/components/grid/grid.html">Grid</a></li>
+            </ul>
+          </li>
+          <li><a href="/components/drawing/drawing.html">DESIGN CSS</a></li>
+        </ul>
+      </nav>
+    <div class="page-title">
+        <h1>FONTS</h1>
+    </div>
+    <!-- MAIN -->
+    <main>
+        <div class="font-color">
+            <button id="showDiv1">font-color</button>
+            <div id="myDiv1" style="display:none;"><img src="images/font-color.PNG" alt=""></div>
+        </div>
+        <div class="font-family">
+            <button id="showDiv2">font-family</button>
+            <div id="myDiv2" style="display:none;"><img src="images/font-family.PNG" alt=""></div>
+        </div>
+        <div class="font-size">
+            <button id="showDiv3">font-size</button>
+            <div id="myDiv3" style="display:none;"><img src="images/font-size.PNG" alt=""></div>
+        </div>
+        <div class="font-weight">
+            <button id="showDiv4">font-weight</button>
+            <div id="myDiv4" style="display:none;"><img src="images/font-weight.PNG" alt=""></div>
+        </div>
+        
+    </main>
+    <!-- MAIN -->
+    <!-- CODING SECTION -->
+    <div class="css-coding-title">
+        <h1>COBA SENDIRI CODINGMU</h1>
+    </div>
+    <section class="coding-css">
+        <div class="editor">
+            <textarea id="html-code">
+<h1>KETIK DISINI!</h1>
+            </textarea>
+            <textarea id="css-code">
+body {
+    background-color : #333;
+    padding : 0;
+    margin : 0;
+}
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    color: orange;
+    font-size: 1.5vw;
+    font-weight: 200;
+}
+            </textarea>
+            
+            <iframe id="output"></iframe>
+        </div>
+    
+        <script type="text/javascript">
+            function run () {
+                let htmlCode = document.querySelector(".editor #html-code").value;
+                let cssCode = "<style>"+document.querySelector(".editor #css-code").value+"<style>";
+                
+                let output = document.querySelector(".editor #output");
+    
+                output.contentDocument.body.innerHTML = htmlCode+cssCode;
+                output.contentWindow.eval(jsCode);
+            }
+            document.querySelector(".editor #html-code").addEventListener("keyup", run);
+            document.querySelector(".editor #css-code").addEventListener("keyup", run);
+            </script>
+    </section>
+</body>
+</html>

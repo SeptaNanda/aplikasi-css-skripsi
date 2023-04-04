@@ -1,0 +1,60 @@
+* {
+    padding: 0;
+    margin: 0;
+ }
+
+  
+  /* MAIN TITLE */
+  /* MAIN TITLE */
+  /* MAIN TITLE */
+
+  main {
+    width: 80%;
+    height: auto;
+    margin: 15vw auto 10vw auto;
+    display: flex;
+  }
+  main div {
+    flex: 1;
+    justify-content: center;
+  }
+.title {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.title h1 {
+    width: 100%;
+    font-size: 5vw;
+    margin: 0 0 2vw 0;
+}
+.title h2 {
+    width: 80%;
+    font-size: 2vw;
+}
+.button  {
+    display: block;
+    margin: 3vw 0;
+}
+.button a {
+    width: auto;
+    height: auto;
+    padding: 1vw 2vw;
+    border: 1px solid #333;
+    text-decoration: none;
+    color: #333;
+    background-color: white;
+    font-size: 1.2vw;
+    transition: all 0.3s ease;
+    margin-right: 2vw;
+    border-radius: 1vw;
+}
+.button a:hover {
+    background-color: #333;
+    color: orange;
+}
+.button i {
+    margin: 0 0 0 0.8vw;
+}

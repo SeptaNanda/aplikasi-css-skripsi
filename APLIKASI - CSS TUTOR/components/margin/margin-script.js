@@ -1,0 +1,25 @@
+$(document).ready(function(){
+	$("#showDiv1").click(function(){
+		$("#myDiv1").toggle();
+	});
+});
+$(document).ready(function(){
+	$("#showDiv2").click(function(){
+		$("#myDiv2").toggle();
+	});
+});
+$(document).ready(function(){
+	$("#showDiv3").click(function(){
+		$("#myDiv3").toggle();
+	});
+});
+$(document).ready(function(){
+	$("#showDiv4").click(function(){
+		$("#myDiv4").toggle();
+	});
+});
+$(document).ready(function(){
+	$("#showDiv5").click(function(){
+		$("#myDiv5").toggle();
+	});
+});

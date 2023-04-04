@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="flex.css">
+    <link rel="stylesheet" href="/navbar.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="flex-script.js"></script>
+    <title>Flex</title>
+</head>
+<body>
+    <nav class="menu">
+        <ul >
+          <li><a href="/home.html">HOME</a></li>
+          <li><a href="#">CSS - MENU</a>
+            <ul class="dropdown">
+              <li><a href="/components/padding/padding.html">Padding</a></li>
+              <li><a href="/components/margin/margin.html">Margin</a></li>
+              <li><a href="/components/fonts/fonts.html">Fonts</a></li>
+              <li><a href="/components/background-color/background-color.html">Background Color</a></li>
+              <li><a href="flex.html">Flex</a></li>
+              <li><a href="/components/grid/grid.html">Grid</a></li>
+            </ul>
+          </li>
+          <li><a href="/components/drawing/drawing.html">DESIGN CSS</a></li>
+        </ul>
+      </nav>
+    <div class="page-title">
+        <h1>FLEX</h1>
+    </div>
+    <!-- JUSTIFY-CONTENT -->
+    <!-- JUSTIFY-CONTENT -->
+    <!-- JUSTIFY-CONTENT -->
+    <h1 class="justify-content-title">Justify Content</h1>
+    <div class="justify-content">
+        <div class="start">
+            <button id="showDiv1">start</button>
+            <div id="myDiv1" style="display:none;"><img src="images/justify-content/start.PNG" alt=""></div>
+        </div>
+        <div class="center">
+            <button id="showDiv2">center</button>
+            <div id="myDiv2" style="display:none;"><img src="images/justify-content/center.PNG" alt=""></div>
+        </div>
+        <div class="end">
+            <button id="showDiv3">end</button>
+            <div id="myDiv3" style="display:none;"><img src="images/justify-content/end.PNG" alt=""></div>
+        </div>
+        <div class="space-around">
+            <button id="showDiv4">space-around</button>
+            <div id="myDiv4" style="display:none;"><img src="images/justify-content/space-around.PNG" alt=""></div>
+        </div>
+        <div class="space-between">
+            <button id="showDiv5">space-between</button>
+            <div id="myDiv5" style="display:none;"><img src="images/justify-content/space-between.PNG" alt=""></div>
+        </div>
+        <div class="space-evenly">
+            <button id="showDiv6">space-evenly</button>
+            <div id="myDiv6" style="display:none;"><img src="images/justify-content/space-evenly.PNG" alt=""></div>
+        </div>
+    </div>
+    <!-- ALIGN-ITEMS -->
+    <!-- ALIGN-ITEMS -->
+    <!-- ALIGN-ITEMS -->
+    <!-- ALIGN-ITEMS -->
+    <h1 class="align-items-title">Align Items</h1>
+    <div class="align-items">
+        <div class="start">
+            <button id="showDiv11">start</button>
+            <div id="myDiv11" style="display:none;"><img src="images/align-items/start.PNG" alt=""></div>
+        </div>
+        <div class="center">
+            <button id="showDiv12">center</button>
+            <div id="myDiv12" style="display:none;"><img src="images/align-items/center.PNG" alt=""></div>
+        </div>
+        <div class="end">
+            <button id="showDiv13">end</button>
+            <div id="myDiv13" style="display:none;"><img src="images/align-items/end.PNG" alt=""></div>
+        </div>
+    </div>
+    <!-- FLEX-DIRECTION -->
+    <!-- FLEX-DIRECTION -->
+    <!-- FLEX-DIRECTION -->
+    <h1 class="flex-direction-title">Flex Direction</h1>
+    <div class="flex-direction">
+        <div class="row">
+            <button id="showDiv21">row</button>
+            <div id="myDiv21" style="display:none;"><img src="images/flex-direction/row.PNG" alt=""></div>
+        </div>
+        <div class="row-reverse">
+            <button id="showDiv22">row-reverse</button>
+            <div id="myDiv22" style="display:none;"><img src="images/flex-direction/row-reverse.PNG" alt=""></div>
+        </div>
+        <div class="column">
+            <button id="showDiv23">column</button>
+            <div id="myDiv23" style="display:none;"><img src="images/flex-direction/column.PNG" alt=""></div>
+        </div>
+        <div class="column-reverse">
+            <button id="showDiv24">column-reverse</button>
+            <div id="myDiv24" style="display:none;"><img src="images/flex-direction/column-reverse.PNG" alt=""></div>
+        </div>
+    </div>
+    <!-- CODING SECTION -->
+    <div class="css-coding-title">
+        <h1>COBA SENDIRI CODINGMU</h1>
+    </div>
+    <section class="coding-css">
+        <div class="editor">
+            <textarea id="html-code">
+<div class="container">
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span>5</span>
+</div>
+            </textarea>
+            <textarea id="css-code">
+body {
+    padding : 0;
+    margin : 0;
+}
+.container {
+    width: 50%;
+    height: 20vw;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+span {
+    width:  3vw;
+    height: 3vw;
+    background-color: orange;
+    margin-right: 2vw;
+    
+}
+            </textarea>
+            
+            <iframe id="output"></iframe>
+        </div>
+    
+        <script type="text/javascript">
+            function run () {
+                let htmlCode = document.querySelector(".editor #html-code").value;
+                let cssCode = "<style>"+document.querySelector(".editor #css-code").value+"<style>";
+                
+                let output = document.querySelector(".editor #output");
+    
+                output.contentDocument.body.innerHTML = htmlCode+cssCode;
+                output.contentWindow.eval(jsCode);
+            }
+            document.querySelector(".editor #html-code").addEventListener("keyup", run);
+            document.querySelector(".editor #css-code").addEventListener("keyup", run);
+            </script>
+    </section>
+</body>
+</html>
